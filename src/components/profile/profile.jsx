@@ -1,40 +1,50 @@
-import PropTypes from 'prop-types';
-import sty from './profile.module.css'
-export const Profile = ({ username, tag, location, avatar, stats }) => {
-  // const ( followers, views, likes ] = stats;
+import { PropTypes } from 'prop-types';
+import { StyledProfile } from './Styled';
+
+function Profile({
+  username,
+  tag,
+  location,
+  avatar,
+  stats: { followers, views, likes },
+}) {
   return (
-  <div className={sty.profile}>
-  <div className={sty.description}>
-  <img src={avatar} alt="User avatar" className= {sty.avatar}/>
-   <p className= {sty.name}>{username}</p>
-    <p className={sty.tag}>@{tag}</p>
-    <p className= {sty.location}>{location}</p>
-  </div>
-  <ul className={sty.stats}>
-  <li>
-  <span className={sty.label}>Followers</span>
-  <span className={sty.quantity}>{stats.followers}</span>
-  </li>
-   <li>
-  <span className={sty.label}>Views</span>
-   <span className={sty.quantity}>{stats.views}</span>
-  </li>
-  <li>
-  <span className={sty.label}>Likes</span>
-   <span className={sty.quantity}>{stats.likes}</span>
-  </li> 
-  </ul>
-  </div>
-  )
-  }
-  Profile.proptypes = {
-    username: Proptypes.string.isRequired,
-    tag: PropTypes.string.isRequired,
-    location: PropTypes.string.isRequired,
-    avatar: PropTypes.string.isrequired,
-    stats: PropTypes. shape({
+    <StyledProfile>
+      <div className="description">
+        <img src={avatar} alt={username} className="avatar" />
+        <p className="name">{username}</p>
+        <p className="tag">@{tag}</p>
+        <p className="location">{location}</p>
+      </div>
+
+      <ul className="stats">
+        <li>
+          <span className="label">Followers</span>
+          <span className="quantity">{followers}</span>
+        </li>
+        <li>
+          <span className="label">Views</span>
+          <span className="quantity">{views}</span>
+        </li>
+        <li>
+          <span className="label">Likes</span>
+          <span className="quantity">{likes}</span>
+        </li>
+      </ul>
+    </StyledProfile>
+  );
+}
+
+Profile.propTypes = {
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  stats: PropTypes.shape({
     followers: PropTypes.number.isRequired,
     views: PropTypes.number.isRequired,
     likes: PropTypes.number.isRequired,
-  }),
-}
+  }).isRequired,
+};
+
+export default Profile;

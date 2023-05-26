@@ -1,6 +1,6 @@
 import { FriendsList, Profile, Statistics, TransactionHistory } from './components';
 
-import transactionsList from './transaction';
+import transactionsList from './transactions';
 import profileData from './user';
 import statsData from './data';
 import friendsData from './friends';

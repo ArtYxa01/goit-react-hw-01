@@ -1,10 +1,4 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { App } from 'components/App';
-import './index.css';
-
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+export { default as TransactionHistory } from "./TransactionHistory/TransactionHistory";
+export { default as Profile } from "./Profile/Profile";
+export { default as Statistics } from "./Statistics/Statistics";
+export { default as FriendsList } from "./FriendsList/FriendsList";
