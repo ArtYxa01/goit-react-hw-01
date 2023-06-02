@@ -1,4 +1,9 @@
-import { FriendsList, Profile, Statistics, TransactionHistory } from './components';
+import profile from 'components/About/profile'
+import statistics from 'components/stats/statistics'
+import FriendList from 'components/FriendList/FriendList'
+import TransactionHistory from 'components/TransactionHistory/TransactionHistory'
+
+
 
 import transactionsList from './transactions';
 import profileData from './user';
