@@ -14,9 +14,9 @@ function App() {
   return (
     <div className="App">
       <TransactionHistory items={transactionsList} />
-      <Profile {...profileData} />
-      <Statistics title="Upload stats" stats={statsData} />
-      <FriendsList friends={friendsData} />
+      <profile {...profileData} />
+      <statistics title="Upload stats" stats={statsData} />
+      <FriendList friends={friendsData} />
     </div>
   );
 }
