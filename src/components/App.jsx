@@ -1,6 +1,6 @@
-import profile from 'components/About/profile'
-import statistics from 'components/stats/statistics'
-import FriendList from 'components/FriendList/FriendList'
+import Profile from 'components/About/profile'
+import Statistics from 'components/stats/statistics'
+import FriendsList from 'components/FriendsList/FriendsList'
 import TransactionHistory from 'components/TransactionHistory/TransactionHistory'
 
 
@@ -14,9 +14,9 @@ function App() {
   return (
     <div className="App">
       <TransactionHistory items={transactionsList} />
-      <profile {...profileData} />
-      <statistics title="Upload stats" stats={statsData} />
-      <FriendList friends={friendsData} />
+      <Profile {...profileData} />
+      <Statistics title="Upload stats" stats={statsData} />
+      <FriendsList friends={friendsData} />
     </div>
   );
 }
