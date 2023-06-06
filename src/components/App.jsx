@@ -1,22 +1,19 @@
 import Profile from 'components/About/profile'
-import Statistics from 'components/stats/statistics'
-import FriendsList from 'components/FriendsList/FriendsList'
-import TransactionHistory from 'components/TransactionHistory/TransactionHistory'
+//import Statistics from 'components/Stats/statistics'
+//import FriendsList from 'components/FriendsList/FriendsList'
+//import TransactionHistory from 'components/TransactionHistory/TransactionHistory'
 
 
 
-import transactionsList from './transactions';
+//import transactionsList from './transactions';
 import profileData from './user';
-import statsData from './data';
-import friendsData from './friends';
+//import statsData from './data';
+//import friendsData from './friends';
 
 function App() {
   return (
     <div className="App">
-      <TransactionHistory items={transactionsList} />
       <Profile {...profileData} />
-      <Statistics title="Upload stats" stats={statsData} />
-      <FriendsList friends={friendsData} />
     </div>
   );
 }
