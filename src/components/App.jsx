@@ -1,4 +1,4 @@
-import Profile from 'components/About/profile'
+import Profile from './About/profile';
 //import Statistics from 'components/Stats/statistics'
 //import FriendsList from 'components/FriendsList/FriendsList'
 //import TransactionHistory from 'components/TransactionHistory/TransactionHistory'
